@@ -12,16 +12,26 @@ module.exports = {
   entry: {
     dev: PATHS.dev
   },
+  resolve: {
+    extensions: ['', '.js', '.jsx']
+  };
   output : {
     path: PATHS.public,
     filename: 'bundle.js'
   },
   devtool: 'source-map',
   module: {
-    loaders: [{
+    loaders: [
+      {
         test: /\.scss$/,
         loaders: ['style', 'css', 'sass?sourceMap'],
         include: PATHS.devSass
-      }]
+      },
+      {
+        test: /\.jsx$/,
+        loaders: ['babel?cacheDirectory'],
+        include PATHS.dev
+      }
+    ]
   }
 };

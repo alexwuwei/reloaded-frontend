@@ -1,0 +1,25 @@
+{
+  "name": "reloaded-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "client-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexwuwei/reloaded-frontend.git"
+  },
+  "author": "Hugo A Guerra <guerrahugoa@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexwuwei/reloaded-frontend/issues"
+  },
+  "homepage": "https://github.com/alexwuwei/reloaded-frontend#readme",
+  "dependencies": {
+    "express": "^4.14.1"
+  },
+  "devDependencies": {
+    "webpack": "^1.14.0"
+  }
+}

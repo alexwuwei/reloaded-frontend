@@ -6,11 +6,11 @@ const ReactDOM = require('react-dom');
 
 var Header = require('./Header.jsx');
 
- class App extends React.Component {
+class App extends React.Component {
   render() {
-    return <Header / >
+    return <Header/>
   }
 }
 
-
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(
+  <App/>, document.getElementById('app'));

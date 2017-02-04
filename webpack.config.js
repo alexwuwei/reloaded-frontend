@@ -14,7 +14,7 @@ module.exports = {
   },
   resolve: {
     extensions: ['', '.js', '.jsx']
-  };
+  },
   output : {
     path: PATHS.public,
     filename: 'bundle.js'
@@ -25,12 +25,13 @@ module.exports = {
       {
         test: /\.scss$/,
         loaders: ['style', 'css', 'sass?sourceMap'],
-        include: PATHS.devSass
+        // include: PATHS.devSass
       },
       {
         test: /\.jsx$/,
+        exclude: '/node_modules/',
         loaders: ['babel?cacheDirectory'],
-        include PATHS.dev
+        // include PATHS.dev
       }
     ]
   }

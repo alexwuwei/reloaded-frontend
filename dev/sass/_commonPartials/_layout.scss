@@ -1,0 +1,30 @@
+/*
+    Visual Style Guide: https://www.dropbox.com/s/5w88x69rullg6h7/02-layout.png?dl=0
+*/
+//padding, gutters, etc.
+$input-padding: 4%;
+// possibly move these umbrella classes to a separate file once we move off current site.  Right now changing SwyfftBootstrap file edits live site.
+.container {
+    max-width: none;
+    @media #{$tablet} {
+        max-width: 768px;
+    }
+    @media #{$desktop-small} {
+        max-width: 980px;
+    }
+    @media #{$desktop-large} {
+        max-width: 1200px;
+    }
+}
+// brings in flex display, while accomodating all supported browsers.
+@mixin flex-display {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+}
